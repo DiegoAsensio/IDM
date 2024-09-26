@@ -1,0 +1,347 @@
+/* Estilos generales */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	background-color: #f4f4f4;
+	color: #333;
+	line-height: 1.6;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+/* Header */
+header {
+	background-color: #e60012;
+	padding: 1rem 0;
+	color: white;
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+}
+
+header h1 {
+	text-align: center;
+}
+
+nav {
+	background-color: #e60012;
+	padding-bottom: 20px;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+nav ul li {
+	margin: 0 1rem;
+}
+
+nav ul li a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+	color: #ffcc00;
+}
+
+h2 {
+	color: #173c62;
+	margin-bottom: 1rem;
+	font-size: 1.3em;
+}
+
+h3 {
+	color: #173c62;
+	margin-bottom: 1rem;
+	font-size: 1.1em;
+}
+
+p {
+	font-size: 0.9em;
+}
+
+/* Contenido principal */
+main {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(30, 24, 24, 0.1);
+	padding: 40px;
+	max-width: 1300px;
+	margin: auto;
+}
+
+section {
+	margin-bottom: 2rem;
+}
+
+.container {
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+/* Características */
+.caracteristicas-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1rem;
+}
+
+.caracteristica {
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	padding: 1.5rem;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caracteristica:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modos de juego */
+.modos-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 2rem;
+}
+
+.modo-card {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modo-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.modo-card img {
+	object-fit: cover;
+}
+
+.card-content {
+	padding: 1.5rem;
+}
+
+.card-content h3 {
+	margin-bottom: 0.5rem;
+}
+
+/* Estilos para la sección de controles */
+.controles-grid {
+	display: grid;
+	gap: 2rem;
+}
+
+.control-item {
+	display: flex;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.control-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.control-image {
+	flex: 1;
+	min-width: 200px;
+}
+
+.control-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.control-content {
+	flex: 1;
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.control-content h3 {
+	margin-bottom: 0.5rem;
+}
+
+/* Estilos para la sección de juegos */
+.gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+}
+
+.gallery img {
+	width: 100%;
+	object-fit: cover;
+	border-radius: 10px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+	transform: scale(1.05);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la sección de sorteo */
+#sorteo {
+	padding: 2rem 0 0 0;
+	margin-bottom: 2rem;
+}
+
+.sorteo-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	background-color: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sorteo-image {
+	flex: 1;
+}
+
+.sorteo-image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.sorteo-form {
+	flex: 1;
+	padding: 2rem;
+}
+
+.sorteo-form p {
+	margin-bottom: 1.5rem;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.form-group label {
+	display: block;
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+	width: 100%;
+	padding: 0.5rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 1rem;
+}
+
+.submit-btn {
+	background-color: #173c62;
+	color: #fff;
+	border: none;
+	padding: 0.75rem 1.5rem;
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+	background-color: #ff1a2d;
+}
+
+/* Footer */
+footer {
+	background-color: #e60012;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+
+.alumno {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.alumno img {
+	width: 250px;
+	border-radius: 50%;
+	margin-bottom: 10px;
+}
+
+.alumno a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.alumno a:hover {
+	text-decoration: underline;
+	color: #ffcc00;
+}
+
+/* Responsive Design para tablet */
+@media (max-width: 768px) {
+	.control-item {
+		flex-direction: column;
+	}
+
+	.control-image {
+		min-height: 200px;
+	}
+
+	.gallery {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.sorteo-container {
+		flex-direction: column;
+	}
+
+	.sorteo-image {
+		height: 200px;
+	}
+
+	.sorteo-form {
+		padding: 1.5rem;
+	}
+}
+
+@media (max-width: 672px) {
+	nav ul {
+		flex-direction: column;
+		gap: 10px;
+		text-align: center;
+	}
+}
+
+/* Responsive Design para celular */
+@media (max-width: 480px) {
+	.gallery {
+		grid-template-columns: 1fr;
+	}
+}
